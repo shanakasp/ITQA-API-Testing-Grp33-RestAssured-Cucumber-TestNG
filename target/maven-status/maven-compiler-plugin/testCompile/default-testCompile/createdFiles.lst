@@ -1,0 +1,7 @@
+com\APIAutomation\stepdefinitions\update\BookUpdateStepDefinitions.class
+com\APIAutomation\utils\ApiUtils.class
+com\APIAutomation\stepdefinitions\get\GetAllBooks.class
+com\APIAutomation\stepdefinitions\delete\BookDeletionStepDefinition.class
+com\APIAutomation\stepdefinitions\post\PostBooksStepDefinitions.class
+com\APIAutomation\runners\TestRunner.class
+com\APIAutomation\stepdefinitions\get\getBookById.class

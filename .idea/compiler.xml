@@ -9,8 +9,5 @@
         <module name="api-test-automation" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="api-test-automation" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>
