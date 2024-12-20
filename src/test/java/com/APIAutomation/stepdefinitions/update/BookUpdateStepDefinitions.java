@@ -1,12 +1,9 @@
 package com.APIAutomation.stepdefinitions.update;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.cucumber.java.Before;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,16 +18,6 @@ public class BookUpdateStepDefinitions {
     private Map<String, Object> bookData;
     private String bookId;
 
-    @Before
-    public void setup() {
-        RestAssured.baseURI = "http://localhost:7081";
-        RestAssured.basePath = "";
-    }
-
-    @Given("I am logged in as {string} with password {string} to update as {word}")
-    public void loginUser(String username, String password, String userType) {
-        this.username = username;
-        this.password = password;
     }
 
     @When("I send a PUT request to {string} with the following data:")
@@ -53,3 +40,28 @@ public class BookUpdateStepDefinitions {
             bookData.put("author", inputData.get("author"));
         }
 
+        // Determine authentication based on username
+        if ("guest".equals(username)) {
+            // No authentication for unauthorized user
+            response = RestAssured.given()
+                    .contentType(ContentType.JSON)
+                    .body(bookData)
+                    .when()
+                    .put(endpoint);
+        } else {
+            // Basic auth for admin and user
+            response = RestAssured.given()
+                    .auth()
+                    .basic(username, password)
+                    .contentType(ContentType.JSON)
+                    .body(bookData)
+                    .when()
+                    .put(endpoint);
+        }
+
+        // Print response for debugging
+        System.out.println("Request Body: " + bookData);
+        System.out.println("Response Body: " + response.getBody().asString());
+        System.out.println("Status Code: " + response.getStatusCode());
+    }
+}
