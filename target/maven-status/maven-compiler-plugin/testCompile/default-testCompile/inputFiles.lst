@@ -1,7 +1,0 @@
-D:\ITQA\ITQA-API-Testing\src\test\java\com\APIAutomation\runners\TestRunner.java
-D:\ITQA\ITQA-API-Testing\src\test\java\com\APIAutomation\stepdefinitions\delete\BookDeletionStepDefinition.java
-D:\ITQA\ITQA-API-Testing\src\test\java\com\APIAutomation\stepdefinitions\get\GetAllBooks.java
-D:\ITQA\ITQA-API-Testing\src\test\java\com\APIAutomation\stepdefinitions\get\getBookById.java
-D:\ITQA\ITQA-API-Testing\src\test\java\com\APIAutomation\stepdefinitions\post\PostBooksStepDefinitions.java
-D:\ITQA\ITQA-API-Testing\src\test\java\com\APIAutomation\stepdefinitions\update\BookUpdateStepDefinitions.java
-D:\ITQA\ITQA-API-Testing\src\test\java\com\APIAutomation\utils\ApiUtils.java
