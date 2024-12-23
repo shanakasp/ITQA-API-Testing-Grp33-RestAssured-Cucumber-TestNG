@@ -2,7 +2,7 @@ package com.APIAutomation.stepdefinitions.update;
 
 
 import io.restassured.RestAssured;
-
+import io.cucumber.java.en.Given;
 import io.restassured.response.Response;
 import io.cucumber.java.Before;
 
@@ -23,6 +23,11 @@ public class BookUpdateStepDefinitions {
     public void setup() {
         RestAssured.baseURI = "http://localhost:7081";
         RestAssured.basePath = "";
+    }
+    @Given("I am logged in as {string} with password {string} to update as {word}")
+    public void loginUser(String username, String password, String userType) {
+        this.username = username;
+        this.password = password;
     }
 
 
