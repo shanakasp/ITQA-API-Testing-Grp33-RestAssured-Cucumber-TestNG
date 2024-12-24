@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 28 10:13:39 IST 2024</td>
+<td>Started on:</td><td>Mon Dec 23 11:41:30 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (260 ms)</td>
+<tr><td>Total time:</td><td>4 seconds (4628 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,7 +68,7 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,77 +76,74 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.runners.TestRunner.setUpClass()'><b>setUpClass</b><br>Test class: com.runners.TestRunner<br>Parameters: org.testng.TestRunner@1fa1cab1</td>
-<td><div><pre>java.lang.IllegalArgumentException: path must exist: C:\itqa\api-test-automation\src\test\resources\features
-	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:49)
-	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
-	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
-	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
-	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:122)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1355457888", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1355457888'><pre>java.lang.IllegalArgumentException: path must exist: C:\itqa\api-test-automation\src\test\resources\features
-	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:49)
-	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
-	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
-	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
-	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:122)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+<td title='com.APIAutomation.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.APIAutomation.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete a book by ID as admin", "Delete a book"</td>
+<td><div><pre>java.lang.AssertionError: Delete request status code does not match expected:&lt;200&gt; but was:&lt;401&gt;
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:318)
+	at com.APIAutomation.stepdefinitions.delete.BookDeletionStepDefinition.verify_status_code(BookDeletionStepDefinition.java:63)
+	at ✽.the response delete status code should be 200(file:///D:/IT%20Quality%20Assuarance/Assignment/ITQA-API-Testing/src/test/resources/features/delete_books.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1475123834", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1475123834'><pre>java.lang.AssertionError: Delete request status code does not match expected:&lt;200&gt; but was:&lt;401&gt;
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:318)
+	at com.APIAutomation.stepdefinitions.delete.BookDeletionStepDefinition.verify_status_code(BookDeletionStepDefinition.java:63)
+	at ✽.the response delete status code should be 200(file:///D:/IT%20Quality%20Assuarance/Assignment/ITQA-API-Testing/src/test/resources/features/delete_books.feature:7)
 </pre></div></td>
-<td>0</td>
-<td>com.runners.TestRunner@292b08d6</td></tr>
+<td>2</td>
+<td>com.APIAutomation.runners.TestRunner@58ea606c</td></tr>
+<tr>
+<td title='com.APIAutomation.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.APIAutomation.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete a book by ID as user", "Delete a book"</td>
+<td><div><pre>java.lang.AssertionError: Delete request status code does not match expected:&lt;401&gt; but was:&lt;404&gt;
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:318)
+	at com.APIAutomation.stepdefinitions.delete.BookDeletionStepDefinition.verify_status_code(BookDeletionStepDefinition.java:63)
+	at ✽.the response delete status code should be 401(file:///D:/IT%20Quality%20Assuarance/Assignment/ITQA-API-Testing/src/test/resources/features/delete_books.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace843019990", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace843019990'><pre>java.lang.AssertionError: Delete request status code does not match expected:&lt;401&gt; but was:&lt;404&gt;
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:318)
+	at com.APIAutomation.stepdefinitions.delete.BookDeletionStepDefinition.verify_status_code(BookDeletionStepDefinition.java:63)
+	at ✽.the response delete status code should be 401(file:///D:/IT%20Quality%20Assuarance/Assignment/ITQA-API-Testing/src/test/resources/features/delete_books.feature:13)
+</pre></div></td>
+<td>3</td>
+<td>com.APIAutomation.runners.TestRunner@58ea606c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.APIAutomation.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.APIAutomation.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Book Creation by Different User Types", "Book Creation Scenarios"</td>
+<td></td>
+<td>3</td>
+<td>com.APIAutomation.runners.TestRunner@58ea606c</td></tr>
+<tr>
+<td title='com.APIAutomation.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.APIAutomation.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Book Creation by Different User Types", "Book Creation Scenarios"</td>
+<td></td>
+<td>3</td>
+<td>com.APIAutomation.runners.TestRunner@58ea606c</td></tr>
+<tr>
+<td title='com.APIAutomation.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.APIAutomation.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Book Creation by Different User Types", "Book Creation Scenarios"</td>
+<td></td>
+<td>3</td>
+<td>com.APIAutomation.runners.TestRunner@58ea606c</td></tr>
+<tr>
+<td title='com.APIAutomation.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.APIAutomation.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Book Creation by Different User Types", "Book Creation Scenarios"</td>
+<td></td>
+<td>3</td>
+<td>com.APIAutomation.runners.TestRunner@58ea606c</td></tr>
 </table><p>
 </body>
 </html>
