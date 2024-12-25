@@ -2,13 +2,14 @@ package com.APIAutomation.stepdefinitions.update;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-
+import io.cucumber.java.Before;
 import java.util.HashMap;
 import java.util.Map;
-
+import static org.testng.Assert.assertEquals;
 
 public class BookUpdateM2StepDefinition {
 
@@ -18,6 +19,11 @@ public class BookUpdateM2StepDefinition {
     private String password;
     private Map<String, Object> bookData;
     private String bookId;
+
+    @Before
+    public void setup() {
+        RestAssured.baseURI = "http://localhost:7081";
+        RestAssured.basePath = "";}
 
 
 
@@ -62,8 +68,21 @@ public class BookUpdateM2StepDefinition {
                     .when()
                     .put(endpoint);
         }
-
+// Log details for debugging
+        logRequestResponse(endpoint);
 
     }
+    @Then("the response status code should be {int} for put Member2")
+    public void verifyStatusCode(int expectedStatusCode) {
+        assertEquals(response.getStatusCode(), expectedStatusCode,
+                "Unexpected status code. Response body: " + response.getBody().asString());
+    }
 
+    private void logRequestResponse(String endpoint) {
+        System.out.println("Endpoint: " + endpoint);
+        System.out.println("Request Body: " + bookData);
+        System.out.println("Response Body: " + response.getBody().asString());
+        System.out.println("Status Code: " + response.getStatusCode());
+    }
 }
+
