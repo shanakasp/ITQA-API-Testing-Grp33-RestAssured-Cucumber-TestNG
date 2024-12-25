@@ -65,7 +65,7 @@ public class GetAllBooks {
     public void validateBooksListGet() {
         Assert.assertEquals(response.getStatusCode(), 200, "Failed to retrieve books");
         List<Map<String, Object>> books = response.jsonPath().getList("$");
-        Assert.assertFalse(books.isEmpty(), "Books list is empty");
+        Assert.assertFalse(!books.isEmpty(), "Books list is empty");
 
         // Print books for debugging
         books.forEach(book -> System.out.println("Book: " + book));

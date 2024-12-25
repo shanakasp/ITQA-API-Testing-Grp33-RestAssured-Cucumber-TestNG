@@ -13,3 +13,4 @@ Feature: Retrieve Books
       | admin    | password | 200                | contain a list of books |
       | admin2   | password2| 401                | be empty or invalid     |
       | admin3   | password3| 401                | be empty or invalid     |
+      | user     | password | 200                | contain a list of books |
