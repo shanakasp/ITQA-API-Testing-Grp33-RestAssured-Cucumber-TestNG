@@ -1,16 +1,14 @@
 package com.APIAutomation.stepdefinitions.update;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
-import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
+
 import io.restassured.response.Response;
 import io.cucumber.java.Before;
 
-import java.util.HashMap;
+
 import java.util.Map;
 
-import static org.testng.Assert.assertEquals;
+
 
 public class BookUpdateM1StepDefinitions {
     private String baseUrl = "http://localhost:7081/api/books";
@@ -25,4 +23,14 @@ public class BookUpdateM1StepDefinitions {
         RestAssured.baseURI = "http://localhost:7081";
         RestAssured.basePath = "";
     }
+    @Given("I am logged in as {string} with password {string} to update as {word} Member1")
+    public void loginUser(String username, String password, String userType) {
+        this.username = username;
+        this.password = password;
+    }
+
+
+
+
+
 }
