@@ -11,6 +11,7 @@ Scenario Outline: Book Creation by Different User Types
       | admin      | password | admin        | The Great Gatsby  | F. Scott Fitzgerald  | 208                |
       | user       | password | user         | 1984    12        | George Orwell        | 201                |
       | guest      | password | unauthorized | Moby Dick         | Herman Melville      | 401                |
+      | admin      | password | admin        | The Great Gatsby  | Robert Merton        | 201                |
 
   Scenario: Create Book with Missing Title
     Given I am logged in as "admin" with password "password" to post as "admin"
