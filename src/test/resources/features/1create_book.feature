@@ -9,8 +9,9 @@ Feature: Book Creation Scenarios
     Then the response status code should be <expectedStatusCode>
     Examples:
       | username   | password | userType     | bookTitle         | bookAuthor           | expectedStatusCode |
-      | user       | password | admin        | The Great Gatsby  | F. Scott Fitzgerald  | 208                |
+      | admin      | password | admin        | The Great Gatsby  | F. Scott Fitzgerald  | 201                |
       | admin      | password | admin        | The Great Gatsby2 | F. Scott Fitzgerald  | 201                |
+      | user       | password | user         | The Great Gatsby3 | F. Scott Fitzgerald  | 201                |
       | user       | password | user         | 1984    12        | George Orwell        | 208                |
       | guest      | password | unauthorized | Moby Dick         | Herman Melville      | 401                |
 

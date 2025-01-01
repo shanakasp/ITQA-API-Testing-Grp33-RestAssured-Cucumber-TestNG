@@ -3,13 +3,13 @@ Feature: Delete a book
 
   Scenario: Delete a book by ID as admin
     Given I am logged in to delete as admin user name "admin" password "password"
-    When I send a DELETE request to "/api/books/3"
+    When I send a DELETE request to "/api/books/4"
     Then the response delete status code should be 200
     And the delete response body should contain "Book deleted successfully"
 
   Scenario: Delete a book by ID as user
     Given I am logged in to delete as user name "user" password "password"
-    When I send a DELETE request to "/api/books/3"
+    When I send a DELETE request to "/api/books/5"
     Then the response delete status code should be 401
     And the delete response body should contain "Unauthorized access"
 
@@ -27,6 +27,6 @@ Feature: Delete a book
 
   Scenario: Delete a existing book by ID as non-auth user
     Given I am logged in to delete not existing as user name "no auth" password "no auth"
-    When I send a DELETE request to "/api/books/3"
+    When I send a DELETE request to "/api/books/6"
     Then the response delete status code should be 401
     And the delete response body should contain ""
