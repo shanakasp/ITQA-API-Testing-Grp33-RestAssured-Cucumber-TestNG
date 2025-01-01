@@ -10,7 +10,7 @@ Feature: Book Creation Scenarios
     Examples:
       | username   | password | userType     | bookTitle         | bookAuthor           | expectedStatusCode |
       | admin      | password | admin        | The Great Gatsby  | F. Scott Fitzgerald  | 201                |
-      | admin      | password | admin        | The Great Gatsby  | F. Scott Fitzgerald2 | 201                |
+      | admin      | password | user         | The Great Gatsby2  | F. Scott Fitzgerald2 | 201                |
       | user       | password | user         | 1984              | George Orwell        | 201                |
       | guest      | password | unauthorized | Moby Dick         | Herman Melville      | 401                |
 
