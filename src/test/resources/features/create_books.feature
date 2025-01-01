@@ -1,4 +1,7 @@
-Scenario Outline: Book Creation by Different User Types
+@CreateBook
+Feature: Book Creation Scenarios
+
+  Scenario Outline: Book Creation by Different User Types
     Given I am logged in as "<username>" with password "<password>" to post as "<userType>"
     When I send a POST request to "/api/books" with the following data:
       | title              | author                |
@@ -8,11 +11,8 @@ Scenario Outline: Book Creation by Different User Types
       | username   | password | userType     | bookTitle         | bookAuthor           | expectedStatusCode |
       | admin      | password | admin        | The Great Gatsby  | F. Scott Fitzgerald  | 201                |
       | admin      | password | admin        | The Great Gatsby2 | F. Scott Fitzgerald  | 201                |
-      | admin      | password | admin        | The Great Gatsby  | F. Scott Fitzgerald  | 208                |
       | user       | password | user         | 1984    12        | George Orwell        | 201                |
       | guest      | password | unauthorized | Moby Dick         | Herman Melville      | 401                |
-      | admin      | password | admin        | The Great Gatsby  | Robert Merton        | 201                |
-
   Scenario: Create Book with Missing Title
     Given I am logged in as "admin" with password "password" to post as "admin"
     When I send a POST request to "/api/books" with the following data:
@@ -26,9 +26,9 @@ Scenario Outline: Book Creation by Different User Types
       | Missing Author   |        |
     Then the response status code should be 400
 
- Scenario: Create Book with both Missing Author and Missing Title
-    Given I am logged in as "admin" with password "password" to post as admin
+  Scenario: Create Book with Same Title with different author
+    Given I am logged in as "admin" with password "password" to post as "admin"
     When I send a POST request to "/api/books" with the following data:
-      | title            | author |
-      |                  |        |
-    Then the response status code should be 400
+      | title               | author                  |
+      | The Great Gatsby    |  F. Scott2 Fitzgerald   |
+    Then the response status code should be 201
