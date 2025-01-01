@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ITQA-API-Testing" />
-        <module name="api-test-automation" />
+        <module name="API-Automation" />
       </profile>
     </annotationProcessing>
   </component>
