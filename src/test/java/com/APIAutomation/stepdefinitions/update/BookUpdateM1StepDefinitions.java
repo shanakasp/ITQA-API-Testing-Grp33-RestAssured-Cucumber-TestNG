@@ -39,33 +39,27 @@ public class BookUpdateM1StepDefinitions {
         // Extract book ID from the endpoint
         bookId = endpoint.substring(endpoint.lastIndexOf('/') + 1);
 
-        // Create book data map with ID
+        // Create book data map with all required fields
         bookData = new HashMap<>();
         bookData.put("id", Integer.parseInt(bookId));
-
-        // Only add title and author if they are not empty
-        if (inputData.get("title") != null && !inputData.get("title").isEmpty()) {
-            bookData.put("title", inputData.get("title"));
-        }
-        if (inputData.get("author") != null && !inputData.get("author").isEmpty()) {
-            bookData.put("author", inputData.get("author"));
-        }
+        bookData.put("title", inputData.getOrDefault("title", ""));  // Use empty string if not provided
+        bookData.put("author", inputData.getOrDefault("author", "")); // Use empty string if not provided
 
         // Determine authentication based on username
         if ("guest".equals(username)) {
-            // No authentication for unauthorized user
             response = RestAssured.given()
                     .contentType(ContentType.JSON)
                     .body(bookData)
+                    .log().body()  // Add request logging
                     .when()
                     .put(endpoint);
         } else {
-            // Basic auth for admin and user
             response = RestAssured.given()
                     .auth()
                     .basic(username, password)
                     .contentType(ContentType.JSON)
                     .body(bookData)
+                    .log().body()  // Add request logging
                     .when()
                     .put(endpoint);
         }
@@ -81,8 +75,5 @@ public class BookUpdateM1StepDefinitions {
         assertEquals(response.getStatusCode(), expectedStatusCode,
                 "Unexpected status code. Response body: " + response.getBody().asString());
     }
-
-
-
 
 }
