@@ -30,7 +30,7 @@ Feature: Book Creation Scenarios
       | Missing Author   |
     Then the response status code should be 400
 
-  Scenario: Create Book with Missing Author
+  Scenario: Create Book with Missing Author & Missing Title
     Given I am logged in as "admin" with password "password" to post as "admin"
     When I send a POST request to "/api/books" with the following data:
       | author          |  title   |
