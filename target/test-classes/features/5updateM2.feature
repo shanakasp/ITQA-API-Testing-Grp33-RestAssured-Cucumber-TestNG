@@ -9,9 +9,9 @@ Feature: Book Update Scenarios by Member2
 
     Examples:
       | username   | password | userType     | bookId | bookTitle             | bookAuthor          | expectedStatusCode |
-      | user       | password | user         | 3      | The Alchemist    s2   |                     | 401             |
-      | guest      | password | guest        | 3      | The Alchemist    s2   |                     | 401           |
-      | guest      | password | guest        | 3      |                       |        author abc   | 401            |
+      | user       | password | user         | 3      | The Alchemist    s2   |                     | 401                |
+      | guest      | password | guest        | 3      | The Alchemist    s2   |                     | 401                |
+      | guest      | password | guest        | 3      |                       |        author abc   | 401                |
 
   Scenario Outline: Update Book with Validation Errors
     Given I am logged in as "admin" with password "password" to update as admin Member1
