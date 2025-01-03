@@ -37,4 +37,12 @@ Feature: Book Creation Scenarios
       |                 |          |
     Then the response status code should be 400
 
+  Scenario: Create Book with Invalid Author name
+    Given I am logged in as "admin" with password "password" to post as "admin"
+    When I send a POST request to "/api/books" with the following data:
+      | title            |  author       |
+      |  Madol Duuwa     |    @#$%^      |
+    Then the response status code should be 403
+
+
 
