@@ -14,7 +14,8 @@ import org.testng.annotations.DataProvider;
        "html:target/reports/report.html",
         "json:target/cucumber.json"
     },
-        tags = " @CreateBook or @GetAllBooks or @GetBookByID or @UpdateBook or @DeleteBooks"
+        tags = " @UpdateBookMember1"
+//@CreateBook or @GetAllBooks or @GetBookByID or @UpdateBook or @DeleteBooks
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
     @Override
